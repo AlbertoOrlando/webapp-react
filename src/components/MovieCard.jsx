@@ -10,7 +10,7 @@ const MovieCard = ({ movieProp }) => {
             <div>
                 <img src={image} alt={title} />
             </div>
-            <p>Directed by {director}</p>
+            <p>Directed by {director || "Anonymous"}</p>
             <p>{abstract}</p>
             <Link to={"/movies/" + id}>Read Reviews</Link>
         </div>
