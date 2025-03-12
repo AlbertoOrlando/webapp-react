@@ -1,28 +1,18 @@
 import { Link } from "react-router-dom";
 
-const MovieCard = () => {
+const MovieCard = ({ movieProp }) => {
+
+    const { id, title, image, abstract, director } = movieProp
     return (
-        <div className="container-moviecard">
-            <div className="movie-card">
-                <h2>Movie Title</h2>
-                <p>Movie Description</p>
-                <Link to="/movies/1">Read Reviews</Link>
+
+        <div className="movie-card">
+            <h2>{title}</h2>
+            <div>
+                <img src={image} alt={title} />
             </div>
-            <div className="movie-card">
-                <h2>Movie Title</h2>
-                <p>Movie Description</p>
-                <Link to="/movies/1">Read Reviews</Link>
-            </div>
-            <div className="movie-card">
-                <h2>Movie Title</h2>
-                <p>Movie Description</p>
-                <Link to="/movies/1">Read Reviews</Link>
-            </div>
-            <div className="movie-card">
-                <h2>Movie Title</h2>
-                <p>Movie Description</p>
-                <Link to="/movies/1">Read Reviews</Link>
-            </div>
+            <p>Directed by {director}</p>
+            <p>{abstract}</p>
+            <Link to={"/movies/" + { id }}>Read Reviews</Link>
         </div>
 
     );
