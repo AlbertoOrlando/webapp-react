@@ -1,8 +1,12 @@
-const ReviewCard = () => {
+const ReviewCard = ({ reviewProp }) => {
+
+    const { name, vote, text } = reviewProp
+
     return (
         <div>
-            <p>Utente</p>
-            <p>Recensione</p>
+            <p>{name}</p>
+            <p>{text}</p>
+            <strong>{vote + "/5"}</strong>
         </div>
     );
 }

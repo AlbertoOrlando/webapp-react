@@ -12,7 +12,7 @@ const MovieCard = ({ movieProp }) => {
             </div>
             <p>Directed by {director}</p>
             <p>{abstract}</p>
-            <Link to={"/movies/" + { id }}>Read Reviews</Link>
+            <Link to={"/movies/" + id}>Read Reviews</Link>
         </div>
 
     );
