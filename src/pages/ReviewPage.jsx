@@ -37,14 +37,14 @@ const ReviewPage = () => {
     return (
         <>
             <div>
-                <div>
+                <div className='review_image'>
                     <img src={movie.image} alt={movie.title} />
                 </div>
-                <h1>{movie.title}</h1>
-                <p>{movie.director}</p>
-                <p>{movie.abstract}</p>
+                <h1 className='review_title'>{movie.title}</h1>
+                <p className='review_director'>{movie.director}</p>
+                <p className='review_abstract'>{movie.abstract}</p>
             </div>
-            <h2>Recensioni</h2>
+            <h2 className='review_title_gen'>Recensioni</h2>
             {renderReviews()}
 
             <section>

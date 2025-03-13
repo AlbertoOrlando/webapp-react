@@ -97,6 +97,31 @@ footer a {
   margin: 20px 0;
 }
 
+.container-home {
+  max-width: 800px;
+  /* Larghezza massima del contenitore */
+  margin: 50px auto;
+  /* Centra il contenitore e aggiunge margini */
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  /* Centra il testo all'interno del contenitore */
+}
+
+.container-home h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container-home p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  /* Giustifica il testo del paragrafo */
+}
+
 
 /* moviepage */
 
@@ -168,3 +193,192 @@ footer a {
 }
 
 /* reviewspage */
+
+.review_image {
+  width: 200px;
+  /* O la larghezza che preferisci */
+  margin: 20px auto;
+  /* Centra l'immagine orizzontalmente */
+  overflow: hidden;
+  /* Assicura che l'immagine non esca dai bordi */
+}
+
+.review_image img {
+  width: 100%;
+  height: auto;
+  /* Rimuove lo spazio extra sotto l'immagine */
+  border-radius: 8px;
+  /* Arrotonda gli angoli dell'immagine */
+}
+
+.review_title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.review_director {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+.review_abstract {
+  width: 80%;
+  /* O la larghezza che preferisci */
+  margin: 20px auto;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+}
+
+.review_title_gen {
+  font-size: 1.5em;
+  margin: 30px auto 10px auto;
+  /* Margine superiore e inferiore, centrato orizzontalmente */
+  text-align: center;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  /* Aggiunge una linea sotto il titolo */
+  padding-bottom: 10px;
+  width: 80%;
+}
+
+.review_card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombra leggera */
+}
+
+.review_card_name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.review_card_text {
+  margin-bottom: 10px;
+  color: #555;
+  line-height: 1.6;
+  /* Migliora la leggibilità */
+}
+
+.review_card_vote {
+  font-weight: bold;
+  color: #007bff;
+  /* Colore per il voto */
+}
+
+/* form */
+.form {
+  width: 400px;
+  /* Larghezza del form */
+  margin: 20px auto;
+  /* Centra il form nella pagina */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.form h5 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.form input[type="text"],
+.form textarea,
+.form input[type="number"] {
+  width: calc(100% - 22px);
+  /* Calcola la larghezza, sottraendo il padding e il bordo */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  /* Include padding e bordo nella larghezza totale */
+}
+
+.form textarea {
+  resize: vertical;
+  /* Permette di ridimensionare verticalmente */
+  min-height: 100px;
+}
+
+.form input[type="number"] {
+  width: 80px;
+  /* Larghezza specifica per il campo voto */
+}
+
+.form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form .form-group {
+  /* Se aggiungi questa classe ai div contenitori */
+  margin-bottom: 15px;
+}
+
+/* notfoundpage */
+.not_found {
+  text-align: center;
+  /* Centra il contenuto orizzontalmente */
+  padding: 50px;
+  font-family: sans-serif;
+}
+
+.not_found h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #d9534f;
+  /* Rosso per indicare l'errore */
+}
+
+.not_found p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.not_found a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.not_found a:hover {
+  background-color: #0056b3;
+}
