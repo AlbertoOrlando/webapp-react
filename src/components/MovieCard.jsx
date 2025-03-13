@@ -7,7 +7,7 @@ const MovieCard = ({ movieProp }) => {
 
         <div className="movie-card">
             <h2>{title}</h2>
-            <div>
+            <div className="copertina_card">
                 <img src={image} alt={title} />
             </div>
             <p>Directed by {director || "Anonymous"}</p>

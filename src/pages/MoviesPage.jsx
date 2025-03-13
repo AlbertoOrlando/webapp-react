@@ -30,10 +30,13 @@ const MoviesPage = () => {
     }
 
     return (
-        <div className="container-movies">
-            <h1>Lista dei Film</h1>
-            {renderMovies()}
-        </div>
+        <>
+            <h1 className='movies_titolo_gen'>Lista dei Film</h1>
+            <div className="container-movies">
+                {renderMovies()}
+            </div>
+        </>
+
 
 
     );
