@@ -192,6 +192,27 @@ footer a {
   font-size: 50px;
 }
 
+.movie-card button {
+  background-color: #e74c3c;
+  /* Rosso */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 40%;
+  /* Transizione per il cambio colore */
+}
+
+.movie-card button:hover {
+  background-color: #c0392b;
+  /* Rosso più scuro al passaggio del mouse */
+}
+
+
+
+
 /* reviewspage */
 
 .review_image {
@@ -274,6 +295,24 @@ footer a {
   font-weight: bold;
   color: #007bff;
   /* Colore per il voto */
+}
+
+.review_card button {
+  background-color: #e74c3c;
+  /* Rosso */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 90%;
+  /* Transizione per il cambio colore */
+}
+
+.review_card button:hover {
+  background-color: #c0392b;
+  /* Rosso più scuro al passaggio del mouse */
 }
 
 /* form */

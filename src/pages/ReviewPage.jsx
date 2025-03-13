@@ -25,11 +25,31 @@ const ReviewPage = () => {
             )
     }
 
+    const deleteReview = (reviewId) => {
+        axios
+            .delete(`http://localhost:3000/api/movies/${movie.id}/reviews/${reviewId}`)
+            .then((response) => {
+                if (response.status === 204) {
+                    // Aggiorna le recensioni nel movie state
+                    setMovie({
+                        ...movie,
+                        reviews: movie.reviews.filter((review) => review.id !== reviewId),
+                    });
+                    console.log(`Recensione con ID ${reviewId} eliminata con successo.`);
+                } else {
+                    console.error(`Errore durante l'eliminazione della recensione con ID ${reviewId}. Stato: ${response.status}`);
+                }
+            })
+            .catch((error) => {
+                console.error(`Errore durante l'eliminazione della recensione con ID ${reviewId}:`, error);
+            });
+    };
+
     useEffect(fetchMovie, [])
 
     const renderReviews = () => {
         return movie?.reviews?.map(review => {
-            return <ReviewCard key={review.id} reviewProp={review} />
+            return <ReviewCard key={review.id} reviewProp={review} onDelete={() => deleteReview(review.id)} />
         });
     };;
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const MovieCard = ({ movieProp }) => {
+const MovieCard = ({ movieProp, onDelete }) => {
 
     const { id, title, image, abstract, director } = movieProp
     return (
@@ -13,6 +13,7 @@ const MovieCard = ({ movieProp }) => {
             <p>Directed by {director || "Anonymous"}</p>
             <p>{abstract}</p>
             <Link to={"/movies/" + id}>Read Reviews</Link>
+            <button onClick={onDelete}>X</button>
         </div>
 
     );
