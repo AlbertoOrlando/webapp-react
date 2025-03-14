@@ -44,8 +44,9 @@ const CreateMoviesPage = () => {
         // // Inviamo i dati al backend con axios e reindirizziamo alla home
         axios.post(endpointApi, formDataOgj, { headers: { "Content-Type": "multipart/form-data" } })
             .then(
-            // () => { navigate("/") }
-        )
+                // () => { navigate("/") }
+                setFormDataOgj(initialData)
+            )
             .catch((err) => {
                 console.log(err);
             });

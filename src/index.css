@@ -147,7 +147,8 @@ footer a {
   margin: 20px;
   width: 400px;
   /* RIMOVI height: 820px; */
-  min-height: 500px;
+  /* min-height: 800px; */
+  height: 850px;
   /* Opzionale: imposta un'altezza minima */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
