@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const initialData = {
     title: "",
-    author: "",
+    director: "",
     image: null,
     abstract: ""
 };
@@ -36,11 +36,16 @@ const CreateMoviesPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (!formDataOgj.title || !formDataOgj.director || !formDataOgj.image || !formDataOgj.abstract) {
+            setErrorMessage("Compila tutti i campi obbligatori.");
+            return;
+        }
+
         // // Inviamo i dati al backend con axios e reindirizziamo alla home
         axios.post(endpointApi, formDataOgj, { headers: { "Content-Type": "multipart/form-data" } })
             .then(
-                () => { navigate("/") }
-            )
+            // () => { navigate("/") }
+        )
             .catch((err) => {
                 console.log(err);
             });
@@ -70,9 +75,9 @@ const CreateMoviesPage = () => {
                         <label>Director:</label>
                         <input
                             className="movie_dir_form"
-                            name="author"
+                            name="director"
                             type="text"
-                            value={formDataOgj.author}
+                            value={formDataOgj.director}
                             onChange={setFieldValue}
                             required
                         />
@@ -100,7 +105,7 @@ const CreateMoviesPage = () => {
                     <div className="movie_but_form_cont">
                         <Link className="movie_a_form" to="/">Back</Link>
                         <button className="movie_but_form" type="submit">
-                            Add Book
+                            Add Movie
                         </button>
                     </div>
                 </form>

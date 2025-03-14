@@ -11,7 +11,7 @@ const MovieCard = ({ movieProp, onDelete }) => {
                 <img src={image} alt={title} />
             </div>
             <p>Directed by {director || "Anonymous"}</p>
-            <p>{abstract}</p>
+            <p className="movie_card_abstarct">{abstract}</p>
             <Link to={"/movies/" + id}>Read Reviews</Link>
             <button onClick={onDelete}>X</button>
         </div>

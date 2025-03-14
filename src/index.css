@@ -5,67 +5,80 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* Stili di base per l'header */
+/* header */
+
 .header {
   background-color: #333;
-  /* Sfondo scuro per l'header */
+  /* Sfondo scuro */
   color: white;
-  /* Testo bianco per contrasto */
-  padding: 1rem 0;
-  /* Aggiunge spazio interno sopra e sotto */
-  width: 100%;
-  /* Occupa l'intera larghezza */
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Ombra leggera */
 }
 
 /* Stili per la navigazione */
 .nav {
   display: flex;
-  /* Utilizza flexbox per allineare i link orizzontalmente */
-  justify-content: center;
-  /* Centra i link orizzontalmente */
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* Larghezza massima per il contenuto */
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Padding laterale */
 }
 
-/* Stili per i link */
-.nav a {
+/* Stili per il pulsante "Home" */
+.home_but a {
   color: white;
-  /* Testo bianco */
   text-decoration: none;
-  /* Rimuove la sottolineatura */
-  margin: 0 1rem;
-  /* Aggiunge spazio laterale tra i link */
-  padding: 0.5rem 1rem;
-  /* Aggiunge spazio interno ai link */
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  /* Transizione per l'hover */
+}
+
+.home_but a:hover {
+  color: #007bff;
+  /* Cambia colore all'hover */
+}
+
+/* Stili per il contenitore degli altri pulsanti di navigazione */
+.nav_cont_other_but {
+  display: flex;
+  gap: 20px;
+  /* Spazio tra i link */
+}
+
+/* Stili per i link di navigazione */
+.nav_cont_other_but a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px 15px;
   border-radius: 5px;
-  /* Arrotonda gli angoli */
-  transition: background-color 0.3s ease;
-  /* Aggiunge una transizione fluida al cambio di colore */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transizione per l'hover */
 }
 
-/* Stili per i link al passaggio del mouse */
-.nav a:hover {
-  background-color: #555;
-  /* Sfondo leggermente più chiaro al passaggio del mouse */
+.nav_cont_other_but a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Leggero sfondo all'hover */
+  color: #007bff;
+  /* Cambia colore all'hover */
 }
 
-/* Stili per il link attivo (opzionale - richiede JavaScript o React Router per determinare l'attivo) */
-
-.nav a.active {
-  background-color: #777;
-}
-
-
-/* Media query per schermi più piccoli */
-@media (max-width: 600px) {
+/* Responsive design */
+@media (max-width: 768px) {
   .nav {
     flex-direction: column;
-    /* Impila i link verticalmente su schermi piccoli */
-    align-items: center;
-    /* Centra i link verticalmente */
+    align-items: flex-start;
   }
 
-  .nav a {
-    margin: 0.5rem 0;
-    /* Aggiunge spazio verticale tra i link */
+  .nav_cont_other_but {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -77,6 +90,7 @@ footer {
   text-align: center;
   /* Allinea il testo al centro */
   width: 100%;
+  margin-top: 20px;
 }
 
 footer p {
@@ -132,11 +146,20 @@ footer a {
   padding: 20px;
   margin: 20px;
   width: 400px;
-  height: 780px;
-  /* O la larghezza che preferisci */
+  /* RIMOVI height: 820px; */
+  min-height: 500px;
+  /* Opzionale: imposta un'altezza minima */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
   background-color: #f9f9f9;
+}
+
+.movie_card_abstarct {
+  max-height: 80px;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-top: 10px;
 }
 
 .movie-card h2 {
@@ -150,21 +173,21 @@ footer a {
   width: 100%;
   margin-bottom: 15px;
   overflow: hidden;
-  /* Assicura che l'immagine non esca dai bordi */
 }
 
 .copertina_card img {
   max-width: 100%;
-  height: auto;
+  /* height: 300px; */
+  /* Regola l'altezza o rimuovila */
   display: block;
-  /* Rimuove lo spazio extra sotto l'immagine */
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .movie-card p {
   margin-bottom: 10px;
   color: #555;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .movie-card a {
@@ -181,7 +204,6 @@ footer a {
   background-color: #0056b3;
 }
 
-
 .container-movies {
   display: flex;
   flex-wrap: wrap;
@@ -195,7 +217,6 @@ footer a {
 
 .movie-card button {
   background-color: #e74c3c;
-  /* Rosso */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -203,14 +224,11 @@ footer a {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-left: 40%;
-  /* Transizione per il cambio colore */
 }
 
 .movie-card button:hover {
   background-color: #c0392b;
-  /* Rosso più scuro al passaggio del mouse */
 }
-
 
 
 
