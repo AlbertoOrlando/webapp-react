@@ -5,7 +5,8 @@ const Header = () => {
         <header className="header">
             <nav className="nav">
                 <Link to="/">Home</Link>
-                <Link to="/movies">movies</Link>
+                <Link to="/movies">Movies</Link>
+                <Link to="/movies/create">Add movies</Link>
             </nav>
         </header>
     );

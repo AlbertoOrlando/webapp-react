@@ -422,3 +422,140 @@ footer a {
 .not_found a:hover {
   background-color: #0056b3;
 }
+
+
+/* form add movie */
+
+/* Stili per l'intestazione del form */
+.cont_tit_gen {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+/* Stili per il contenitore principale del form */
+#cont_form {
+  width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Stili per il form */
+.form_add_movie {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stili per i contenitori dei campi */
+.movie_tit_form_cont,
+.movie_dir_form_cont,
+.movie_img_form_cont,
+.movie_abs_form_cont {
+  margin-bottom: 20px;
+}
+
+/* Stili per le etichette dei campi */
+.movie_tit_form_cont label,
+.movie_dir_form_cont label,
+.movie_img_form_cont label,
+.movie_abs_form_cont label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Stili per gli input di testo */
+.movie_tit_form,
+.movie_dir_form {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Stili per l'input file */
+.movie_img_form {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Stili per la textarea */
+.movie_abs_form {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  resize: vertical;
+  min-height: 150px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Stili per gli stati di focus */
+.movie_tit_form:focus,
+.movie_dir_form:focus,
+.movie_abs_form:focus {
+  border-color: #007bff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Stili per il contenitore dei bottoni */
+.movie_but_form_cont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* Stili per i bottoni */
+.movie_a_form,
+.movie_but_form {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Stili per il bottone "Back" */
+.movie_a_form {
+  background-color: #6c757d;
+}
+
+/* Stili per il bottone "Add Book" */
+.movie_but_form {
+  background-color: #007bff;
+}
+
+/* Stili per gli stati di hover dei bottoni */
+.movie_a_form:hover,
+.movie_but_form:hover {
+  filter: brightness(90%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #cont_form {
+    width: 90%;
+    padding: 20px;
+  }
+}
